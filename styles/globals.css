@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+    @apply m-0 p-0 box-border antialiased;
+    background-color: #000; /* خلفية سوداء افتراضية حتى يتم تحميل التدرج */
+    }
+}
+
+/* أنيميشن الظهور الناعم */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1.2s ease-out forwards;
+}
